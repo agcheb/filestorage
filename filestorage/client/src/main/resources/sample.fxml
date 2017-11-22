@@ -1,0 +1,19 @@
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Password?>
+
+<VBox fx:controller="Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" >
+    <HBox fx:id=""authPanel>
+        <TextField HBox.hgrow="ALWAYS" fx:id="loginField"/>
+        <PasswordField HBox.hgrow="ALWAYS" fx:id="passField" onAction="sendAuthMsg"/>
+        <Button HBox.hgrow="ALWAYS" onAction="sendAuthMsg">Авторизоваться</Button>
+    </HBox>
+    <ListView VBox.vgrow="ALWAYS" fx:id="mainList"/>
+    <HBox fx:id="cmdPanel" visible="false" managed="false">
+        <Button onAction="#downloadFile">Скачать файл</Button>
+    </HBox>
+</VBox>
